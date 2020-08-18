@@ -8,6 +8,10 @@
 	- [x] Macos
 - Rust multiplatform version of [gitswitch-py](https://gist.github.com/christopher-nguyen-huy/718f774e006bbc961f9401208d1afef5)
 
+## What does it do?
+- Symlinks the selected profile key to `id_rsa`
+- Edits your git email and username
+
 ## Prerequisites
 - Git installed
 - An `.ssh/accounts` directory in the home directory
