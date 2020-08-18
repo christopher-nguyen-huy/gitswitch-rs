@@ -1,0 +1,23 @@
+[package]
+name = "gitswitch-rs"
+version = "0.1.1"
+authors = ["Christopher Nguyen <christopher.nguyen.huy@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# https://stackoverflow.com/q/36604010
+[[bin]]
+name = "gitswitch"
+path = "src/main.rs"
+
+[dependencies]
+home = "^0"
+csv = "^1"
+serde = { version = "^1", features = ["derive"]} # Needed for Deserialize on struct
+
+[profile.release]
+opt-level = 'z'  # Optimize for size.
+lto = true # Link time optimization
+codegen-units = 1
+panic = 'abort'
